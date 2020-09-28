@@ -1,0 +1,8 @@
+Script started on 2020-09-27 16:47:01-05:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="188" LINES="25"]
+]0;jarred@jarred-linux-pc: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments[01;32mjarred@jarred-linux-pc[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments[00m$ ./hw03.sh
+xterm-256color
+/home/jarred
+]0;jarred@jarred-linux-pc: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments[01;32mjarred@jarred-linux-pc[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments[00m$ exit
+exit
+
+Script done on 2020-09-27 16:47:12-05:00 [COMMAND_EXIT_CODE="0"]

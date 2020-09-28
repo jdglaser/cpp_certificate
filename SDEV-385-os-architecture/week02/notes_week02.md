@@ -106,4 +106,43 @@ Figure 2.7 Passing of parameters as a table
 ## 2.4.1 Process Control
 
 - Running program needs to be able to halt execution either normally (`end()`) or abnormally (`abort()`)
+- Use a process or job to `load()` and `execute()` another program
+- Return control when loaded program terminates - depends if existing program is lost, saved, or allowed to continue execution concurrently with new program
+- Use system calls for this purpose `create_process()` or `submit_job()`
+
+![](img/2020-09-24-19-58-42.png)
+
+- multiple processes may share data - system calls allow process to **lock** shared data
+
+![](img/2020-09-24-20-00-37.png)
+
+## 2.4.2 File Mangaement
+
+- Need to be able to:
+  - create, delete files
+  - open and use it
+  - read, write or reposition (rewing or skip to the end of the file)
+  - close file
+  - access and modify file attributes
+
+## 2.4.3 Device Management
+
+- Can be very similar to file management
+- I/O devices can even be treated by OS in the same way as file
+
+## 2.4.4 Information Maintenance
+
+- system calls that exist to transfer information between user program and os
+
+## 2.4.5 Communication
+
+- **message-passing model** - communicating processes transfer messages with one another
+- **shared-memory model** - create and gain access to regions of memory owned by other processes
+
+## 2.4.6 Protection
+
+- mechanism for controlling access to resources provided by computer system
+
+# 2.5 System Program
+
 - 

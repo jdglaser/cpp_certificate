@@ -1,0 +1,2 @@
+echo $TERM
+echo $HOME

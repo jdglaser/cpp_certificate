@@ -1,0 +1,136 @@
+Script started on 2020-09-27 16:39:54-05:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="188" LINES="25"]
+]0;jarred@jarred-linux-pc: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments[01;32mjarred@jarred-linux-pc[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments[00m$ PS1="\w: "
+~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments: export HISTSIZE=100
+~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments: echo $HISTSIZE
+100
+~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments: week04=~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments
+~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments: cd $week04
+~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments: alias h="history"
+~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments: history[K[K[K[K[K[K
+   64  exit
+   65  ./setup.sh 
+   66  exit
+   67  sudo apt update
+   68  sudo snap install notable --classic
+   69  cd Documents/
+   70  ls
+   71  mkdir labs
+   72  cd labs
+   73  mkdir week04
+   74  code .
+   75  sudo apt install gcc
+   76  sudo apt-get install -y xclip
+   77  cd ..
+   78  git init
+   79  git remote add origin https://github.com/jdglaser/cpp_certificate.git
+   80  git branch -M master
+   81  git pull
+   82  git clone https://github.com/jdglaser/cpp_certificate.git
+   83  ls
+   84  cd cpp_certificate/
+   85  code .
+   86  cd ..
+   87  code .
+   88  cd Documents/
+   89  ls
+   90  cd cpp_certificate/
+   91  ls
+   92  touch setup.sh
+   93  ls
+   94  code .
+   95  cd ..
+   96  ls
+   97  chmod +x .
+   98  ./setup.sh
+   99  chmod +x setup.sh
+  100  ./setup.sh
+  101  ls -l
+  102  ./setup.sh
+  103  script ./setup.txt
+  104  cd SDEV-415-linux-programming-1/
+  105  cd week04
+  106  cd assignments/
+  107  hw02.sh
+  108  ./hw02.sh
+  109  cd SDEV-415-linux-programming-1/
+  110  cd week04
+  111  cd hw02.sh
+  112  ./hw02.
+  113  ./hw02.sh
+  114  cd assignments/
+  115  ./hw02.sh
+  116  week04
+  117  export PATH=$PATH:/~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04
+  118  week04
+  119  cd $week04
+  120  cd Documents/
+  121  cd cpp_certificate/
+  122  cd SDEV-415-linux-programming-1/
+  123  cd week04/
+  124  hw02.sh
+  125  cd assignments/
+  126  cd hw02.sh
+  127  ./hw0
+  128  ./hw02.sh
+  129  export PATH=$HOME/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/:$PATH
+  130  $PATH
+  131  export PATH=/home/jarred/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/:$PATH
+  132  echo $PATH
+  133  $week04
+  134  cd ..
+  135  $week04
+  136  week04
+  137  cd $week04
+  138  cd week04
+  139  cd $week04
+  140  cd SDEV-415-linux-programming-1/
+  141  cd week04
+  142  cd assignments/
+  143  chmod +x .
+  144  ./hw02.sh
+  145  chmod +x ./
+  146  ./hw02.sh
+  147  chmod +x hw02.sh
+  148  ./hw02.sh
+  149  PS1="Hello: \w: "
+  150  fd
+  151  ./hw02.sh
+  152  PS1="\w: "
+  153  export HISTSIZE=100
+  154  echo $HISTSIZE
+  155  week04=/home/jarred/Documents/cpp_certificate/SDEV-415-linux-programming-1/assignments
+  156  cd $week04
+  157  week04=~/Documents/cpp_certificate/SDEV-415-linux-programming-1/assignments
+  158  echo $week04
+  159  cd $week04
+  160  week04=~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments
+  161  cd $week04
+  162  alias h="history"
+  163  h
+~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments: alias dir="ls -[K[K[K[K[K[K[K[K[Klistlong="ls -latr"
+~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments: listlong
+total 28
+drwxrwxr-x 4 jarred jarred 4096 Sep 27 11:38 [0m[01;34m..[0m
+-rwxrwxr-x 1 jarred jarred  437 Sep 27 11:40 [01;32mhw01.sh[0m
+-rw-rw-r-- 1 jarred jarred 3397 Sep 27 11:40 hw01.txt
+-rw-rw-r-- 1 jarred jarred 1301 Sep 27 11:42 readme.md
+drwxrwxr-x 2 jarred jarred 4096 Sep 27 16:39 [01;34m.[0m
+-rwxrwxr-x 1 jarred jarred  858 Sep 27 16:41 [01;32mhw02.sh[0m
+-rw-rw-r-- 1 jarred jarred 4096 Sep 27 16:42 hw02.txt
+~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments: alias dir="ls -aF | more"
+~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments: dir
+./
+../
+hw01.sh*
+hw01.txt
+hw02.sh*
+hw02.txt
+readme.md
+~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments: alias del="rm -i"
+~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments: del
+rm: missing operand
+Try 'rm --help' for more information.
+~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments: exit
+exit
+
+Script done on 2020-09-27 16:43:12-05:00 [COMMAND_EXIT_CODE="1"]

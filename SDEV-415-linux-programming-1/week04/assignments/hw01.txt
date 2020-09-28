@@ -1,0 +1,142 @@
+Script started on 2020-09-27 11:38:51-05:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="188" LINES="25"]
+]0;jarred@jarred-linux-pc: ~/Documents/cpp_certificate[01;32mjarred@jarred-linux-pc[00m:[01;34m~/Documents/cpp_certificate[00m$ exit./setup.sh 
++ echo 'Creating contents for class Linux Programming 1'
+Creating contents for class Linux Programming 1
++ echo 'Creating directory'
+Creating directory
++ ROOT_NAME=SDEV-415-linux-programming-1
++ echo SDEV-415-linux-programming-1
+SDEV-415-linux-programming-1
++ mkdir SDEV-415-linux-programming-1
++ echo 'Directory SDEV-415-linux-programming-1 created'
+Directory SDEV-415-linux-programming-1 created
++ cd SDEV-415-linux-programming-1
+++ seq -f %02g 1 15
++ for i in $(seq -f "%02g" 1 15)
++ mkdir week01
++ cd week01
++ mkdir notes
++ mkdir assignments
++ echo 'week01 created'
+week01 created
++ cd ..
++ for i in $(seq -f "%02g" 1 15)
++ mkdir week02
++ cd week02
++ mkdir notes
++ mkdir assignments
++ echo 'week02 created'
+week02 created
++ cd ..
++ for i in $(seq -f "%02g" 1 15)
++ mkdir week03
++ cd week03
++ mkdir notes
++ mkdir assignments
++ echo 'week03 created'
+week03 created
++ cd ..
++ for i in $(seq -f "%02g" 1 15)
++ mkdir week04
++ cd week04
++ mkdir notes
++ mkdir assignments
++ echo 'week04 created'
+week04 created
++ cd ..
++ for i in $(seq -f "%02g" 1 15)
++ mkdir week05
++ cd week05
++ mkdir notes
++ mkdir assignments
++ echo 'week05 created'
+week05 created
++ cd ..
++ for i in $(seq -f "%02g" 1 15)
++ mkdir week06
++ cd week06
++ mkdir notes
++ mkdir assignments
++ echo 'week06 created'
+week06 created
++ cd ..
++ for i in $(seq -f "%02g" 1 15)
++ mkdir week07
++ cd week07
++ mkdir notes
++ mkdir assignments
++ echo 'week07 created'
+week07 created
++ cd ..
++ for i in $(seq -f "%02g" 1 15)
++ mkdir week08
++ cd week08
++ mkdir notes
++ mkdir assignments
++ echo 'week08 created'
+week08 created
++ cd ..
++ for i in $(seq -f "%02g" 1 15)
++ mkdir week09
++ cd week09
++ mkdir notes
++ mkdir assignments
++ echo 'week09 created'
+week09 created
++ cd ..
++ for i in $(seq -f "%02g" 1 15)
++ mkdir week10
++ cd week10
++ mkdir notes
++ mkdir assignments
++ echo 'week10 created'
+week10 created
++ cd ..
++ for i in $(seq -f "%02g" 1 15)
++ mkdir week11
++ cd week11
++ mkdir notes
++ mkdir assignments
++ echo 'week11 created'
+week11 created
++ cd ..
++ for i in $(seq -f "%02g" 1 15)
++ mkdir week12
++ cd week12
++ mkdir notes
++ mkdir assignments
++ echo 'week12 created'
+week12 created
++ cd ..
++ for i in $(seq -f "%02g" 1 15)
++ mkdir week13
++ cd week13
++ mkdir notes
++ mkdir assignments
++ echo 'week13 created'
+week13 created
++ cd ..
++ for i in $(seq -f "%02g" 1 15)
++ mkdir week14
++ cd week14
++ mkdir notes
++ mkdir assignments
++ echo 'week14 created'
+week14 created
++ cd ..
++ for i in $(seq -f "%02g" 1 15)
++ mkdir week15
++ cd week15
++ mkdir notes
++ mkdir assignments
++ echo 'week15 created'
+week15 created
++ cd ..
++ echo 'Listing created directory structure'
+Listing created directory structure
++ ls
+week01	week02	week03	week04	week05	week06	week07	week08	week09	week10	week11	week12	week13	week14	week15
+]0;jarred@jarred-linux-pc: ~/Documents/cpp_certificate[01;32mjarred@jarred-linux-pc[00m:[01;34m~/Documents/cpp_certificate[00m$ ./setup.sh [7Pexit
+exit
+
+Script done on 2020-09-27 11:38:55-05:00 [COMMAND_EXIT_CODE="0"]

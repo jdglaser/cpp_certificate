@@ -1,0 +1,16 @@
+Script started on 2020-09-27 17:12:05-05:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="188" LINES="25"]
+]0;jarred@jarred-linux-pc: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments[01;32mjarred@jarred-linux-pc[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments[00m$ exit./hw06.shexport IGNOREEOF=2[9P./hw06.sh
++ ls /usr/local/
++ echo /home/jarred/
+/home/jarred/
++ ls /home/jarred/
+Desktop  Documents  Downloads  ls_output.txt  Music  Pictures  Public  snap  Steam  Templates  Videos
++ wc -l /home/jarred/ls_output.txt
+9 /home/jarred/ls_output.txt
++ ls /usr/local/
++ wc -l
+9
+]0;jarred@jarred-linux-pc: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments[01;32mjarred@jarred-linux-pc[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week04/assignments[00m$ e[Kexit
+exit
+
+Script done on 2020-09-27 17:12:15-05:00 [COMMAND_EXIT_CODE="0"]
