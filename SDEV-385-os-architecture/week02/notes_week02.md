@@ -145,4 +145,81 @@ Figure 2.7 Passing of parameters as a table
 
 # 2.5 System Program
 
-- 
+- __System programs__ - provide convenient environment for program development and execution
+  - **File Management**
+  - **Status Information**
+  - **File modification**
+  - **Programming Language Support**
+  - **Program loading and execution**
+  - **Communications**
+  - **Background Services**
+
+# 2.6 Operating-System Design and Implementation
+
+## 2.6.1 Design Goals
+
+- User goals
+  - convenient to user
+  - easy to learn and use
+  - reliable
+  - safe
+  - fast
+- System goals
+  - harder to clearly define
+
+## 2.6.2 Mechanisms and Policies
+
+- mechanism - how to do something
+- policy - what will be done
+  - likely to change across places over time
+
+## 2.6.3 Implementation
+
+- Most operating systems written in variety of languages
+  - Lowest level / kenel - assembly
+  - Higher-level routines - C
+  - system programs - C, C++, Python, PERL, Shell scripts
+- Advantages of using a higher level language to implement os:
+  - easier to code and debug
+  - impovements in compiler tech will improve generated code for entire os
+  - os is easier to port (move to other hardware)
+- Disadvantage of using higher level language to implement os:
+  - reduced speed and increased storage requirements 
+  - This is less of an issue in today's systems
+- Major performance improvements in operating systems are more like due to result of better data structures and algorithms than better assmebly language code
+
+# 2.7 Operating-System Structure
+
+- common to partition tasks into small components rather than one monolithic system
+
+## 2.7.1 Simple Structure
+
+- MS-DOS - no well defined structure - limited by hardware at time (Intel 8088)
+  ![](img/2020-09-28-12-30-45.png)
+- Original UNIX OS - was also limited by available hardware - two separable parts kernel and system programs - monolithic structure was difficult to implement
+  ![](img/2020-09-28-12-33-28.png)
+
+## 2.7.2 Layered Approach
+
+- With proper hardware support - os can be broken into pieces
+  - smaller and easier to support
+- **Layered approach** - os broken into a number of layers (levels)
+- Bottom layer (0) - hardware
+- Highest layer (N) user interface
+![](img/2020-09-28-12-37-45.png)
+- each layer can only access layers below it
+  - simpler for debugging and programming each layer
+- each layer contains data structures and a set of routines to be invoked by higher level layers
+- difficulty in properly planning each layer
+- also tend to be less efficient than other types - each layer adds overhead to a system call
+
+## 2.7.3 Microkernels
+
+- **Mach** - developed in 1980s that modularized the kernel using microkernel approach
+  - remove all nonessential components from kernel and implement them as system and user-level programs
+  ![](img/2020-09-28-12-44-36.png)
+- easier to extend operatings system - less changes to kernel
+- more security and reliability - a service failed rest of os remains untouched
+- performance can suffer due to increased system-function overhead
+
+## 2.7.4 Modules
