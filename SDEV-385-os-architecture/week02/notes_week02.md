@@ -195,8 +195,11 @@ Figure 2.7 Passing of parameters as a table
 ## 2.7.1 Simple Structure
 
 - MS-DOS - no well defined structure - limited by hardware at time (Intel 8088)
+
   ![](img/2020-09-28-12-30-45.png)
+
 - Original UNIX OS - was also limited by available hardware - two separable parts kernel and system programs - monolithic structure was difficult to implement
+
   ![](img/2020-09-28-12-33-28.png)
 
 ## 2.7.2 Layered Approach
