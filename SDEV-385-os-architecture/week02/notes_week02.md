@@ -1,12 +1,12 @@
 # Chapter 2 - Operating System Structures
 
-# Chapter Objectives
+## Chapter Objectives
 
 - Describe services an os provides to users, processes, and other systems
 - Discuss various ways of structuring an os
 - Explain how operating systems are installed and customized and how they boot
 
-# 2.1 Operating-System Services
+## 2.1 Operating-System Services
 
 ![Untitled.png](img/Untitled.png)
 
@@ -24,20 +24,20 @@ Figure 2.1 A view of operating system services
     - **Accounting** - which users use how much and what kinds of computer resources
     - **Protection and security** - keep one process from interfering with others or os itself when running concurrently - all access to system resources is controlled
 
-# 2.2 User and Operating-System Interface
+## 2.2 User and Operating-System Interface
 
-## 2.2.1 Command Interpreters
+### 2.2.1 Command Interpreters
 
 - **command line interpreter** - get and execute the next user-specified command
 - two general ways for commands to be implemented
     - command interpreter itself contains the code to execute the command
     - system programs (used by UNIX) - uses command to load file into memory and execute
 
-## 2.2.2 Graphical User Interfaces
+### 2.2.2 Graphical User Interfaces
 
 - users employ mouse-based window and menu system characterized by a **desktop**
 
-# 2.3 System Calls
+## 2.3 System Calls
 
 - **System calls** - provide interface to the services made available by an os
     - generally available as routines written in C and C++ (maybe assembly for certain low level tasks)
@@ -70,7 +70,7 @@ Figure 2.6 The handling of a user application invoking the open() system call
 
 Figure 2.7 Passing of parameters as a table
 
-# 2.4 Types of System Calls
+## 2.4 Types of System Calls
 
 - Process control
   - end, abort
@@ -103,7 +103,7 @@ Figure 2.7 Passing of parameters as a table
 
 ![](img/2020-09-24-19-49-53.png)
 
-## 2.4.1 Process Control
+### 2.4.1 Process Control
 
 - Running program needs to be able to halt execution either normally (`end()`) or abnormally (`abort()`)
 - Use a process or job to `load()` and `execute()` another program
@@ -116,7 +116,7 @@ Figure 2.7 Passing of parameters as a table
 
 ![](img/2020-09-24-20-00-37.png)
 
-## 2.4.2 File Mangaement
+### 2.4.2 File Mangaement
 
 - Need to be able to:
   - create, delete files
@@ -125,25 +125,25 @@ Figure 2.7 Passing of parameters as a table
   - close file
   - access and modify file attributes
 
-## 2.4.3 Device Management
+### 2.4.3 Device Management
 
 - Can be very similar to file management
 - I/O devices can even be treated by OS in the same way as file
 
-## 2.4.4 Information Maintenance
+### 2.4.4 Information Maintenance
 
 - system calls that exist to transfer information between user program and os
 
-## 2.4.5 Communication
+### 2.4.5 Communication
 
 - **message-passing model** - communicating processes transfer messages with one another
 - **shared-memory model** - create and gain access to regions of memory owned by other processes
 
-## 2.4.6 Protection
+### 2.4.6 Protection
 
 - mechanism for controlling access to resources provided by computer system
 
-# 2.5 System Program
+## 2.5 System Program
 
 - __System programs__ - provide convenient environment for program development and execution
   - **File Management**
@@ -154,9 +154,9 @@ Figure 2.7 Passing of parameters as a table
   - **Communications**
   - **Background Services**
 
-# 2.6 Operating-System Design and Implementation
+## 2.6 Operating-System Design and Implementation
 
-## 2.6.1 Design Goals
+### 2.6.1 Design Goals
 
 - User goals
   - convenient to user
@@ -167,13 +167,13 @@ Figure 2.7 Passing of parameters as a table
 - System goals
   - harder to clearly define
 
-## 2.6.2 Mechanisms and Policies
+### 2.6.2 Mechanisms and Policies
 
 - mechanism - how to do something
 - policy - what will be done
   - likely to change across places over time
 
-## 2.6.3 Implementation
+### 2.6.3 Implementation
 
 - Most operating systems written in variety of languages
   - Lowest level / kenel - assembly
@@ -188,11 +188,11 @@ Figure 2.7 Passing of parameters as a table
   - This is less of an issue in today's systems
 - Major performance improvements in operating systems are more like due to result of better data structures and algorithms than better assmebly language code
 
-# 2.7 Operating-System Structure
+## 2.7 Operating-System Structure
 
 - common to partition tasks into small components rather than one monolithic system
 
-## 2.7.1 Simple Structure
+### 2.7.1 Simple Structure
 
 - MS-DOS - no well defined structure - limited by hardware at time (Intel 8088)
 
@@ -202,7 +202,7 @@ Figure 2.7 Passing of parameters as a table
 
   ![](img/2020-09-28-12-33-28.png)
 
-## 2.7.2 Layered Approach
+### 2.7.2 Layered Approach
 
 - With proper hardware support - os can be broken into pieces
   - smaller and easier to support
@@ -216,7 +216,7 @@ Figure 2.7 Passing of parameters as a table
 - difficulty in properly planning each layer
 - also tend to be less efficient than other types - each layer adds overhead to a system call
 
-## 2.7.3 Microkernels
+### 2.7.3 Microkernels
 
 - **Mach** - developed in 1980s that modularized the kernel using microkernel approach
   - remove all nonessential components from kernel and implement them as system and user-level programs
@@ -225,4 +225,47 @@ Figure 2.7 Passing of parameters as a table
 - more security and reliability - a service failed rest of os remains untouched
 - performance can suffer due to increased system-function overhead
 
-## 2.7.4 Modules
+### 2.7.4 Modules
+
+- one of th ebest current methodologies for operating-system deisng - loadable kernel modules
+- kernel provide core services - other services implemented dynamically as kernel is running
+  ![](img/2020-09-28-20-30-39.png)
+
+### 2.7.5 Hybrid Systems
+
+- In practice, most operating systems combine different structures, resulting in hybrid systems
+- Examples:
+  - Mac OS X
+  - iOS
+  - Android
+
+## 2.8 Operating-System Debugging
+
+### 2.8.1 Failure Analysis
+
+- if process fails, most operatig systems write error info to log file
+- Can also take a **core dump** - capture of memory of the process and store it in a file for later analysis
+- A failure in kernel is called a **crash**
+  - memory state saved to a **crash dump**
+
+### 2.8.2 Performance Tuning
+
+- need some way to monitory performance for tuning and improvement
+- trace listings of system behavior - all interesting events logged with their time and parameters written to file
+- E.g. Windows Task Manager
+
+### 2.8.3 DTrace
+
+- **DTrace** - facility that dynamically adds probes to a running system - in user process and kernel
+
+## 2.9 Operating-System Generation
+
+- operating systems are usually designed to run on any of a class of machines at a variety of sites
+  - **SYSGEN (system generation)** - system configured or generated for each specific computer site
+- OS normally distributed on disk, CD-ROM, or DVD-ROM, or an ISO image (file in format of a CD-ROM or DVD-ROM)
+
+## 2.10 System Boot
+
+- Procedure of starting a computer by loading the kernel is known as **booting**
+- **bootstrap program** - small piece of code locates the kernel, loads it into main memory, and starts execution
+- Instruction register is loaded with predefined memory location and execution starts - initial bootstrap in form of **ROM (read only memory)**
