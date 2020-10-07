@@ -1,0 +1,14 @@
+Script started on 2020-10-02 23:52:56-05:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="83" LINES="25"]
+]0;jarred@jarred-linux-pc: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week05/assignments[01;32mjarred@jarred-linux-pc[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week05/assignments[00m$ ./greetme.sh 
+Hello jarred!
+Fri 02 Oct 2020 11:53:01 PM CDT
+xterm-256color
+/home/jarred/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+/home/jarred
+Please, could you loan me $50.00?
+Good-bye
+
+]0;jarred@jarred-linux-pc: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week05/assignments[01;32mjarred@jarred-linux-pc[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week05/assignments[00m$ exit
+exit
+
+Script done on 2020-10-02 23:53:15-05:00 [COMMAND_EXIT_CODE="2"]

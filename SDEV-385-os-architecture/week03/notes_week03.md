@@ -128,3 +128,120 @@ return 0;
 
 ## 3.4 Interprocess Communication
 
+- Process **independednt** if it can't affect or be affected by other processes executing in system - does not share data with another process
+- **Cooperating** if can affect or be affected by other processes executing in system - shares data with another process
+- Reasons for providing process cooperation:
+  - Information sharing
+  - Computation speedup
+  - Modularity
+  - Convenience
+- Requires an **interprocess communication mechanism (IPC)**
+  - Shared memory - region of memory shared by cooperating processes
+  - Message passing - communication takes place by messages exchanged between cooperating processes
+  ![](img/2020-10-04-20-58-36.png)
+
+### 3.4.1 Shared-Memory Systems
+
+- Cooperating processes agree to remove operatng system restriction of process isolation
+- Form and location of shared data determined by processes and is not under operating system's control
+- processes responsible for ensuring not writing to same location
+- producer-consumer problem
+  - Good example of producer consumer - web server (producer) and client (consumer)
+   - producer and consumer must be synchronized
+     - Two type os buffers can be used
+       - **unbounded bffer** - no limit on size of buffer - consumer may wait for new items, but producer can always produce new items
+       - **bounded buffer** - fixied buffer size
+
+```c++
+// The producer process using shared memory
+item next_produced;
+while (true) {
+  /* produce an item in next produced */
+  while (((in + 1) % BUFFER SIZE ) == out)
+    ; /* do nothing */
+  }
+  
+  buffer[in] = next produced;
+  in = (in + 1) % BUFFER SIZE ;
+}
+```
+
+```c++
+#define BUFFER SIZE 10
+
+typedef struct {
+  . . .
+}item;
+
+item buffer[BUFFER SIZE];
+int in = 0;
+int out = 0;
+```
+
+```c++
+// Consumer process using shared memory
+item next_consumed
+
+while (true) {
+  while (in == out)
+    ; /* do nothing */
+  next_consumed = buffer[out];
+  out = (out + 1) % BUFFER SIZE ;
+}
+/* consume the item in next consumed */
+```
+
+  - shared buffer implemented as circular array with two logical pointers `in` and `out`
+  - `in` - next free position in th ebuffer
+  - `out` - first full position in buffer
+  - empty when `in == out`
+  - full when `((in + 1) % BUFFER SIZE) == out`
+
+### 3.4.2 Message-PAssing Systems
+
+- If process P and Q want to communicate they must send messages to and receieve messages from each other
+  - **communication link** exists between them
+  - methods for logically implementing a link
+    - direct or indirect communication
+    - synchronous or asynchronous communication
+    - automatic or explicit buffering
+
+#### 3.4.2.1 Naming
+
+- Under **direct communication** each process must explicitly name recipient or sender
+  - **symmetry**
+    - `send(P, message)` - Send a message to process `P`
+    - `receieve(Q, message)` - Receive a message from process `Q`
+  - **assymetry** in addressing - only sender names recipient
+    - `send(P, message)` - send a message to process P
+    - `receive(id, message)` - receieve message from any process
+- **indirect communication** messages are sent to and receieved from mailboxes or ports
+  - `send(A, message)` - send a message to mailbox A
+  - `receive(A, message)` - Receive a message from mailbox A
+
+#### 3.4.2.2 Synchronization
+
+- **Blocking** (synchronous)
+  - send - sending process is blocked until message is received by receiving process or by the mailbox
+  - receieve - receiever blocks until a message is available
+- **non-blocking** (asynchronous)
+  - send - sends the message and resumes
+  - receeive - retreives valid message or a null
+
+```c++
+message next_produced;
+while (true) {
+  /* produce an item in next produced */
+  send(next_produced)
+}
+```
+
+#### 3.4.2.3 Buffering
+
+- Message queues:
+  - Zero capacity - queue has a max length of zero
+  - Bounded capacity - finite length n, at most n messages can reside in it
+  - unbounded capacity - queues length is potentially infinite - sender never blocks
+
+
+
