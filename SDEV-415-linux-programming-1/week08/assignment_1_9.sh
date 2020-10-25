@@ -1,3 +1,4 @@
+# SDEV-415 Assignment Week 08 Questions 1-9
 file=datebook.txt
 # Change the name Jon to Jonathan
 echo "Change the name Jon to Jonathan"
@@ -26,16 +27,20 @@ echo
 
 # Append three asterisks to the end of lines starting with Fred
 echo "Append three asterisks to the end of lines starting with Fred"
-sed -n 's/^Fred/'
+sed -n '/^Fred/ s/$/***/p' $file
+echo
 
 # Replace the line containing Jose with JOSE HAS RETIRED.
+echo "Replace the line containing Jose with JOSE HAS RETIRED"
+sed '/Jose/c JOSE HAS RETIRED' $file
+echo
 
 # Change Popeye ’s birthday to 11/14/46. Assume you don’t know Popeye ’s original birthday. Use a regular expression to search for it.
+echo "Change Popeye ’s birthday to 11/14/46. Assume you don’t know Popeye ’s original birthday. Use a regular expression to search for it."
+sed -n '/^Popeye/ s/[0-9]\+\/[0-9]\+\/[0-9][0-9]/11\/14\/46/p' $file
+echo
 
 # Delete all blank lines.
-
-# Write a sed script that will:
-    # a) Insert above the first line the title PERSONNEL FILE.
-    # b) Remove the salaries ending in 500
-    # c) Print the contents of the file with the last names and first names reversed
-    # d) Append at the end of the file THE END
+echo "Delete all blank lines."
+sed '/^$/d' $file
+echo
