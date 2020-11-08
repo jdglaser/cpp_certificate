@@ -8,13 +8,14 @@
 #include<vector>
 #include<tuple>
 #include<map>
+#include <dirent.h>
 
 //=============================================
 // SDEV-385 Homework 10
 //=============================================
 /*
 Description:
-File utility program.
+File utility program. User can select 1 or more files, show file(s) details, change file(s) permissions, and copy file(s)
 
 OS: Ubuntu 20.04.1 LTS
 Compiler: gcc versoin 9.3.0 (Ubuntu 9.3.0-10ubuntu2)
@@ -24,6 +25,7 @@ Last Updated: 2020-11-08
 
 using namespace std;
 
+// Use for mapping permissions
 map<string, mode_t> permMap = {
     {"r", S_IRUSR},
     {"w", S_IWUSR},
@@ -34,21 +36,9 @@ map<string, mode_t> permMap = {
 int handleError(int res) {
   if (res == -1) {
     perror(strerror(errno));
-    //exit(EXIT_FAILURE);
+    exit(EXIT_FAILURE);
   }
   return res;
-}
-
-// Show menu
-void printMenu() {
-    cout << 
-        "1) Select a file\n"
-        "2) Show file(s) details\n"
-        "3) Change file(s) permissions\n"
-        "4) Copy file(s) to new directory\n"
-        "5) Cancel\n"
-        "6) Quit\n"
-        "Select an option: ";
 }
 
 // Check if file is not a dir
@@ -88,7 +78,7 @@ void printFileStats(string filePath) {
 }
 
 // Change file permissions
-void changeFilePermissions(vector<tuple<int, string>> selectedFiles) {
+void changeFilePermissions(vector<tuple<int, string>> &selectedFiles) {
     bool add;
     mode_t perm;
 
@@ -132,7 +122,75 @@ void changeFilePermissions(vector<tuple<int, string>> selectedFiles) {
     }
 }
 
+// Copy a single file to new dir
+void copyFile(int src, int dest, size_t srcSize) {
+    // Set the buffer size and create the buffer
+    int BUFFER_SIZE = 100;
+    char buffer[BUFFER_SIZE];
 
+    // Start at beginning of file
+    lseek(src,0,SEEK_SET);
+
+    // Initially read as many bytes as possible into the buffer
+    ssize_t bytesRead = handleError(read(src, buffer, BUFFER_SIZE));
+
+    while (bytesRead > 0) {
+        ssize_t bytesWritten = handleError(write(dest, buffer, bytesRead));
+        bytesRead = handleError(read(src, buffer, BUFFER_SIZE));
+    }
+}
+
+// Copy files to new dir
+void copyFiles(vector<tuple<int, string>> &selectedFiles) {
+    int count;
+    struct stat theStatus;
+    string dirName;
+    while (true) {
+        cout << "Select the directory to copy to: ";
+        cin >> dirName;
+        DIR *dir = opendir(dirName.c_str());
+        if (dir == NULL) {
+            if (errno == ENOENT) {
+                cout << dirName + " is not a valid directory." << endl;
+                continue;
+            } else {
+                perror(strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+        } else {
+            closedir(dir);
+            break;
+        }
+    }
+
+    for (tuple<int, string> i: selectedFiles) {
+        string fileName = (string) basename(get<1>(i).c_str());
+        handleError(fstat(get<0>(i), &theStatus));
+        int outputFileDescriptor = handleError(open((dirName + "/" + fileName).c_str(),O_RDWR | O_CREAT, S_IRWXU));
+        handleError(ftruncate(outputFileDescriptor, 0));
+        copyFile(get<0>(i), outputFileDescriptor, theStatus.st_size);
+        handleError(close(outputFileDescriptor));
+    }
+}
+
+// Close selected files
+void closeSelectedFiles(vector<tuple<int, string>> &selectedFiles) {
+    for (tuple<int, string> i: selectedFiles) {
+        close(get<0>(i));
+    }
+}
+
+// Show menu
+void printMenu() {
+    cout << 
+        "1) Select a file\n"
+        "2) Show file(s) details\n"
+        "3) Change file(s) permissions\n"
+        "4) Copy file(s) to new directory\n"
+        "5) Cancel\n"
+        "6) Quit\n"
+        "Select an option: ";
+}
 
 int main() {
     cout << "=================================" << endl;
@@ -169,12 +227,14 @@ int main() {
         } else if (choice == "3") {
             changeFilePermissions(selectedFiles);
         } else if (choice == "4") {
-            cout << "";
+            copyFiles(selectedFiles);
         } else if (choice == "5") {
             cout << "De-selecting all files...";
+            closeSelectedFiles(selectedFiles);
             selectedFiles.clear();
             cout << endl;
         } else if (choice == "6") {
+            closeSelectedFiles(selectedFiles);
             cout << "Quitting program, goodbye.\n";
             break;
         } else {
