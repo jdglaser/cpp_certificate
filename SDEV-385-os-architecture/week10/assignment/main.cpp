@@ -18,7 +18,7 @@ Description:
 File utility program. User can select 1 or more files, show file(s) details, change file(s) permissions, and copy file(s)
 
 OS: Ubuntu 20.04.1 LTS
-Compiler: gcc versoin 9.3.0 (Ubuntu 9.3.0-10ubuntu2)
+Compiler: g++-9 (Ubuntu 9.3.0-10ubuntu2) 9.3.0
 Last Updated: 2020-11-08
 
 */
