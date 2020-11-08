@@ -202,5 +202,11 @@ We can see that the unit test passes this time. Peterson's algorithm does in fac
     }
     ```
 
-The first example above shows Peterson's algorithm, but only with the flag control, and the turn control left out.
+The first example above shows Peterson's algorithm, but only with the flag control, and the turn control left out. In this case, we let allow threads to signal that they want to enter the critical section, however if the processes both try to enter the critical section at the same time we may end up with a scenario where the threads enter a deadlock.
+
+In the second example we tell the processes to take turns, however we could also end up in a deadlock if one thread finishes running before the other, and thus never releases the lock. This process may also cause starvation because the waiting thread could wait forever without being able to execute.
+
+**References**
+
+(2008). Mutual Exclusions: Classical Algorithms for Locks. https://www.cs.rice.edu/~vs3/comp422/lecture-notes/comp422-lec19-s08-v1.pdf.
 

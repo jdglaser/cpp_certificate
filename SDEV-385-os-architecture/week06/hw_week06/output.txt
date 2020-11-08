@@ -1,0 +1,12 @@
+Script started on 2020-10-11 01:00:22-05:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="198" LINES="25"]
+]0;jarred@jarred-linux-pc: ~/Documents/cpp_certificate/SDEV-385-os-architecture/week06/hw_week06[01;32mjarred@jarred-linux-pc[00m:[01;34m~/Documents/cpp_certificate/SDEV-385-os-architecture/week06/hw_week06[00m$ sudo apt-get install -fsudo dpkg ––configure –a[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Capt-get dist-upgrade[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K./main
+Starting...
+Thread 0 did work on test_num. It is now: 1
+Thread 1 did work on test_num. It is now: 1
+Thread 2 did work on test_num. It is now: 1
+Final value of test_num should be 1. It is: 1
+
+]0;jarred@jarred-linux-pc: ~/Documents/cpp_certificate/SDEV-385-os-architecture/week06/hw_week06[01;32mjarred@jarred-linux-pc[00m:[01;34m~/Documents/cpp_certificate/SDEV-385-os-architecture/week06/hw_week06[00m$ exit
+exit
+
+Script done on 2020-10-11 01:01:21-05:00 [COMMAND_EXIT_CODE="127"]
