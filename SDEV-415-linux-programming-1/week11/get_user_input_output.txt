@@ -1,0 +1,110 @@
+Script started on 2020-11-14 13:51:44-06:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="15"]
+]0;jarred@jarred-VirtualBox: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week11[01;32mjarred@jarred-VirtualBox[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week11[00m$ ./get_user_input.sh 
+Please enter your name (first, last, middle)
+Jarred Glaser Dale
+Hello Jarred
+Please enter username
+jarred
+Welcome jarred!
+Your user ID is: 1000
+Your home dir is: /home/jarred
+Your running processes are:
+    PID TTY          TIME CMD
+   1310 ?        00:00:00 systemd
+   1311 ?        00:00:00 (sd-pam)
+   1317 ?        00:00:00 pulseaudio
+   1319 ?        00:00:00 tracker-miner-f
+   1321 ?        00:00:01 dbus-daemon
+   1326 ?        00:00:00 gnome-keyring-d
+   1330 ?        00:00:00 gvfsd
+   1335 ?        00:00:00 gvfsd-fuse
+   1353 ?        00:00:00 gvfs-udisks2-vo
+   1361 tty2     00:00:00 gdm-x-session
+   1364 tty2     00:01:16 Xorg
+   1365 ?        00:00:00 gvfs-gphoto2-vo
+   1369 ?        00:00:00 gvfs-afc-volume
+   1374 ?        00:00:00 gvfs-goa-volume
+   1378 ?        00:00:01 goa-daemon
+   1385 ?        00:00:00 goa-identity-se
+   1401 ?        00:00:00 gvfs-mtp-volume
+   1415 tty2     00:00:00 gnome-session-b
+   1496 ?        00:00:00 VBoxClient
+   1497 ?        00:00:00 VBoxClient
+   1505 ?        00:00:00 VBoxClient
+   1506 ?        00:00:00 VBoxClient
+   1514 ?        00:00:00 VBoxClient
+   1516 ?        00:00:11 VBoxClient
+   1521 ?        00:00:00 VBoxClient
+   1522 ?        00:00:00 VBoxClient
+   1527 ?        00:00:00 ssh-agent
+   1548 ?        00:00:00 ibus-daemon
+   1554 ?        00:00:00 ibus-dconf
+   1555 ?        00:00:01 ibus-ui-gtk3
+   1556 ?        00:00:03 ibus-extension-
+   1559 ?        00:00:00 ibus-x11
+   1563 ?        00:00:00 ibus-portal
+   1569 ?        00:00:00 gnome-keyring-d
+   1608 ?        00:00:00 at-spi-bus-laun
+   1613 ?        00:00:00 dbus-daemon
+   1623 ?        00:00:00 at-spi2-registr
+   1624 ?        00:00:00 xdg-desktop-por
+   1639 ?        00:00:00 xdg-document-po
+   1642 ?        00:00:00 xdg-permission-
+   1652 ?        00:00:00 xdg-desktop-por
+   1668 ?        00:00:00 dconf-service
+   1675 ?        00:00:00 gnome-session-c
+   1681 ?        00:00:00 gnome-session-b
+   1699 ?        00:03:57 gnome-shell
+   1714 ?        00:00:00 ibus-engine-sim
+   1745 ?        00:00:00 gnome-shell-cal
+   1751 ?        00:00:00 evolution-sourc
+   1758 ?        00:00:00 gvfsd-metadata
+   1767 ?        00:00:00 evolution-calen
+   1792 ?        00:00:00 evolution-addre
+   1804 ?        00:00:00 gjs
+   1818 ?        00:00:00 gvfsd-trash
+   1829 ?        00:00:00 gsd-a11y-settin
+   1830 ?        00:00:00 gsd-color
+   1832 ?        00:00:00 gsd-datetime
+   1834 ?        00:00:00 gsd-housekeepin
+   1835 ?        00:00:00 gsd-keyboard
+   1836 ?        00:00:00 gsd-media-keys
+   1837 ?        00:00:00 gsd-power
+   1842 ?        00:00:00 gsd-print-notif
+   1844 ?        00:00:00 gsd-rfkill
+   1849 ?        00:00:00 gsd-screensaver
+   1850 ?        00:00:00 gsd-sharing
+   1852 ?        00:00:00 gsd-smartcard
+   1853 ?        00:00:00 gsd-sound
+   1857 ?        00:00:00 gsd-usb-protect
+   1860 ?        00:00:00 gsd-wacom
+   1862 ?        00:00:00 gsd-wwan
+   1863 ?        00:00:00 gsd-xsettings
+   1901 ?        00:00:00 gsd-disk-utilit
+   1919 ?        00:00:00 evolution-alarm
+   1938 ?        00:00:00 gsd-printer
+   2157 ?        00:00:00 update-notifier
+   2387 ?        00:00:36 code
+   2389 ?        00:00:00 code
+   2390 ?        00:00:00 code
+   2426 ?        00:00:59 code
+   2429 ?        00:00:05 code
+   2443 ?        00:06:11 code
+   2472 ?        00:00:28 code
+   2492 pts/0    00:00:00 bash
+   2501 ?        00:00:13 code
+   2508 ?        00:00:01 code
+   2570 ?        00:00:23 cpptools
+   2602 ?        00:00:00 code
+   3337 pts/0    00:00:00 script
+   3338 pts/1    00:00:00 bash
+   3353 pts/0    00:00:00 script
+   3354 pts/2    00:00:00 bash
+   3361 pts/2    00:00:00 get_user_input.
+   3364 pts/2    00:00:00 ps
+The day of the week is Saturday and the current time is 01:52:15 PM
+
+]0;jarred@jarred-VirtualBox: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week11[01;32mjarred@jarred-VirtualBox[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week11[00m$ exit
+exit
+
+Script done on 2020-11-14 13:52:27-06:00 [COMMAND_EXIT_CODE="127"]
