@@ -1,0 +1,11 @@
+Script started on 2020-11-14 13:58:16-06:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="15"]
+]0;jarred@jarred-VirtualBox: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week11[01;32mjarred@jarred-VirtualBox[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week11[00m$ ./conditional_statements.sh 
+Parameter 1 is empty
+]0;jarred@jarred-VirtualBox: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week11[01;32mjarred@jarred-VirtualBox[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week11[00m$ ./conditional_statements.sh bob
+No such user on system
+]0;jarred@jarred-VirtualBox: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week11[01;32mjarred@jarred-VirtualBox[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week11[00m$ ./conditional_statements.sh bob[K[K[Kjarred
+User jarred found in /etc/passwd file!
+]0;jarred@jarred-VirtualBox: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week11[01;32mjarred@jarred-VirtualBox[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week11[00m$ exit
+exit
+
+Script done on 2020-11-14 13:58:37-06:00 [COMMAND_EXIT_CODE="0"]
