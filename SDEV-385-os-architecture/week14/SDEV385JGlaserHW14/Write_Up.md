@@ -74,3 +74,40 @@ Time taken by program is : 3.486613 sec
 ```
 
 Both systems had similar runtimes, with Linux being around 0.006387 seconds faster than Windows.
+
+An additional program, `test_error.cpp`, intentionally includes a division by 0 error so we can compare the stack traces of both compilers. The code for this program can be seen below.
+
+```c++
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    cout << "Starting...intentionally causing error";
+    4/0;
+}
+```
+
+The stack trace when trying to compile in Windows is:
+
+```
+Starting build...
+Build finished with warning(s):
+C:\Users\jarre\OneDrive\cpp_certificate\SDEV-385-os-architecture\week14\test_error.cpp: In function 'int main()':
+C:\Users\jarre\OneDrive\cpp_certificate\SDEV-385-os-architecture\week14\test_error.cpp:8:6: warning: division by zero [-Wdiv-by-zero]
+     4/0;
+```
+
+The stack trace when trying to compile in Linux is:
+
+```
+Starting build...
+Build finished with warning(s):
+/home/jarred/Documents/cpp_certificate/SDEV-385-os-architecture/week14/test_error.cpp: In function ‘int main()’:
+/home/jarred/Documents/cpp_certificate/SDEV-385-os-architecture/week14/test_error.cpp:8:6: warning: division by zero [-Wdiv-by-zero]
+    8 |     4/0;
+      |    
+```
+
+Both stack traces are very similar, although the Linux stack trace is a little prettier, showing the actual pipe delimited line number where the error occurred.

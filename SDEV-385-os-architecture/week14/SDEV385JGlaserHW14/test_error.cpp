@@ -4,6 +4,6 @@
 using namespace std;
 
 int main() {
-    cout << "Starting...intentionall causing error";
+    cout << "Starting...intentionally causing error";
     4/0;
 }
