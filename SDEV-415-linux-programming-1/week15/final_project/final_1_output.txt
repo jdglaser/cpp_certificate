@@ -1,0 +1,11 @@
+Script started on 2020-12-18 00:25:04-06:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="141" LINES="15"]
+]0;jarred@jarred-VirtualBox: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week15/final_project[01;32mjarred@jarred-VirtualBox[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week15/final_project[00m$ ./final_1.sh
+Boba Fett:222-456-9191:410 Dark Side Ave:05/01/1988:2000
+Luke Skywalker:111-234-8181:123 Tatooine Ln.:04/10/1987:10000
+Darth Vader:800-418-1003:987 Death Star Circle:12/01/1965:4500
+
+There are 3 entries
+]0;jarred@jarred-VirtualBox: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week15/final_project[01;32mjarred@jarred-VirtualBox[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week15/final_project[00m$ exit
+exit
+
+Script done on 2020-12-18 00:25:24-06:00 [COMMAND_EXIT_CODE="0"]

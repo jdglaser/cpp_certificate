@@ -8,12 +8,12 @@
 FILE=datafile
 
 # Sort by last name
-sort -k2 $FILE
+sort -k2 -o $FILE $FILE
 
 # Show contents of file
 cat $FILE
 
 echo
 entries=$(wc -l $FILE | tr -dc '0-9')
-entries=$((entries+1))
+entries=$((entries))
 echo "There are $entries entries"

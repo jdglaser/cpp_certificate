@@ -1,0 +1,32 @@
+Script started on 2020-12-18 00:25:32-06:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="141" LINES="15"]
+]0;jarred@jarred-VirtualBox: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week15/final_project[01;32mjarred@jarred-VirtualBox[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week15/final_project[00m$ ./final_2.sh
+Would you like to add an entry?
+[1]Yes
+[2]No
+1
+Enter name to add: b Bob Billybob
+Enter phone number: 111-222-3434
+Enter address: 123 East Ln.
+Enter birthday: 10/3 14/2004
+Enter salary: 7400
+Entry Bob Billybob added
+1:Bob Billybob:111-222-3434:123 East Ln.:10/14/2004:7400
+Would you like to add an entry?
+[1]Yes
+[2]No
+1
+Enter name to add: Alex Zzlastinlist
+Enter phone number: 875-3294-  -3019
+Enter address: 444 H Dr
+Enter birthday: 09/10/200 10
+Enter salary: 4030
+Entry Alex Zzlastinlist added
+5:Alex Zzlastinlist:875-329-3019:444 H Dr:09/10/2010:4030
+Would you like to add an entry?
+[1]Yes
+[2]No
+2
+]0;jarred@jarred-VirtualBox: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week15/final_project[01;32mjarred@jarred-VirtualBox[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week15/final_project[00m$ exit
+exit
+
+Script done on 2020-12-18 00:27:03-06:00 [COMMAND_EXIT_CODE="0"]

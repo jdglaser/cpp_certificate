@@ -8,8 +8,8 @@
 FILE="datafile2"
 
 add_entry() {
-    read -p "Enter name: " fullname
-    if (cat $FILE | cut -d : -f 1 | grep -q "^$fullname$"); then
+    read -p "Enter name to add: " fullname
+    if (grep -q "^$fullname:" $FILE); then
         echo "$fullname already exists. Please try again."
         return
     fi
@@ -22,13 +22,13 @@ add_entry() {
 
     sort -k2 -o $FILE $FILE
     echo "Entry $fullname added"
-    grep -n "$fullname" $FILE
+    grep -n "^$fullname:" $FILE
 }
 
-while read -p "Would you like to add an entry? [y]es|[n]o|[q]uit: " && [[ $REPLY != q ]]; do
+while read -p $'Would you like to add an entry?\n[1]Yes\n[2]No\n'; do
   case $REPLY in
-    y) add_entry;;
-    n) echo "";;
+    1) add_entry;;
+    2) exit 0;;
     *) echo "Not a valid option";;
   esac
 done

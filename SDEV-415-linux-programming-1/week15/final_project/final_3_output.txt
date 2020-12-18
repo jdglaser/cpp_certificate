@@ -1,0 +1,67 @@
+Script started on 2020-12-18 00:27:44-06:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="141" LINES="15"]
+]0;jarred@jarred-VirtualBox: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week15/final_project[01;32mjarred@jarred-VirtualBox[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week15/final_project[00m$ ./final_3.sh
+Select an option:
+[1]Add entry
+[2]Delete entry
+[3]View entry
+[4]Exit
+1
+Enter name to add: Bob     Princess        Jaba Hutt
+Enter phone number: 450-223-1010
+Enter address: Tatt    Jaba's Palace, Tatooine
+Enter birthday: 10/01/1420
+Enter salary: 10000000
+Entry Jaba Hutt added
+2:Jaba Hutt:450-223-1010:Jaba's Palace, Tatooine:10/01/1420:10000000
+Select an option:
+[1]Add entry
+[2]Delete entry
+[3]View entry
+[4]Exit
+3
+Enter name to view: Darth Vader
+Darth Vader
+4:Darth Vader:800-418-1003:987 Death Star Circle:12/01/1965:4500
+Select an option:
+[1]Add entry
+[2]Delete entry
+[3]View entry
+[4]Exit
+1
+Enter name to add: Jaba Hutt
+Jaba Hutt already exists. Please try again.
+Select an option:
+[1]Add entry
+[2]Delete entry
+[3]View entry
+[4]Exit
+2
+Enter name to delete: Jaba Hutt    Hut        Leia Skylwalker
+Leia Skylwalker does not exist. Please try again.
+Select an option:
+[1]Add entry
+[2]Delete entry
+[3]View entry
+[4]Exit
+2
+Enter name to delete: Jaba Hutt
+Jaba Hutt deleted
+Select an option:
+[1]Add entry
+[2]Delete entry
+[3]View entry
+[4]Exit
+3
+Enter name to view: Jaba h Hutt
+Jaba Hutt does not exist
+Select an option:
+[1]Add entry
+[2]Delete entry
+[3]View entry
+[4]Exit
+4
+Quitting program. Goodbye.
+]0;jarred@jarred-VirtualBox: ~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week15/final_project[01;32mjarred@jarred-VirtualBox[00m:[01;34m~/Documents/cpp_certificate/SDEV-415-linux-programming-1/week15/final_project[00m$ exit
+exit
+
+Script done on 2020-12-18 00:29:55-06:00 [COMMAND_EXIT_CODE="0"]

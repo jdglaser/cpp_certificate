@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Final Question 2
+# Final Question 3
 # Jarred Glaser
 # 2020-12-17
 # Menu run datafile program
@@ -28,7 +28,7 @@ add_entry() {
 
     sort -k2 -o $FILE $FILE
     echo "Entry $fullname added"
-    grep -n "$fullname" $FILE
+    grep -n "^$fullname:" $FILE
 }
 
 delete_entry() {
@@ -43,7 +43,7 @@ delete_entry() {
 }
 
 view_entry() {
-    read -p "Enter name to delete: " fullname
+    read -p "Enter name to view: " fullname
     if (grep -q "^$fullname:" $FILE)
         then
         echo $fullname
